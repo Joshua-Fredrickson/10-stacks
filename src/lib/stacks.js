@@ -2,8 +2,6 @@
 
 const LinkedList = require('./linked-list');
 
-module.exports = Stacks;
-
 class Stacks {
   constructor() {
     this._storage = LinkedList();
@@ -18,6 +16,16 @@ class Stacks {
   }
 
   peek() {
-    return this._storage.end();
+    return this._storage.end.value();
+  }
+
+  isEmpty() {
+    if (this._storage.next === null) {
+      console.log('This STACK is empty!');
+      return null;
+    }
+    return null;
   }
 }
+
+module.exports = Stacks;

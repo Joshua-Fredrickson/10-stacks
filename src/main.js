@@ -1,13 +1,12 @@
 'use strict';
 
-require('dotenv').config();
+const Stacks = require('./lib/stacks');
 
-if (!process.env.NODE_ENV) {
-  throw new Error('Undefined NODE_ENV');
-}
+const stackOne = new Stacks();
 
-if (process.env.NODE_ENV !== 'production') {
-  require('babel-register');
-}
-
-require('./src/main')
+stackOne.peek();
+stackOne.push(99);
+stackOne.push(34);
+stackOne.push(24);
+stackOne.pop();
+stackOne.peek();

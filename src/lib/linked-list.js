@@ -106,6 +106,4 @@ module.exports = class LinkedList {
       newCurrentNode = newCurrentNode.next;
     }
   }
-
 };
-
